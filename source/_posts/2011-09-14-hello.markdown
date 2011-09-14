@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Hello"
+date: 2011-09-14 20:51
+comments: true
+categories: 
+---
+
+This is my first post. I wish I had something interesting to say. So far I've stumbled a few times with Octopress but I really like the idea of it so I am going to keep persevering.
