@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Bleep Systems</title>
+  <link href="http://blog.bleepsystems.com/atom.xml" rel="self"/>
+  <link href="http://blog.bleepsystems.com/"/>
+  <updated>2011-09-14T21:23:35+08:00</updated>
+  <id>http://blog.bleepsystems.com/</id>
+  <author>
+    <name>Neil Charlton</name>
+    
+  </author>
+
+  
+  <entry>
+    <title>Hello</title>
+    <link href="http://blog.bleepsystems.com/blog/2011/hello/"/>
+    <updated>2011-09-14T20:51:00+08:00</updated>
+    <id>http://blog.bleepsystems.com/blog/2011/hello</id>
+    <content type="html">&lt;p&gt;This is my first post. I wish I had something interesting to say. So far I&amp;#8217;ve stumbled a few times with Octopress but I really like the idea of it so I am going to keep persevering.&lt;/p&gt;
+</content>
+  </entry>
+  
+</feed>
