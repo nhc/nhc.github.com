@@ -1,1 +1,623 @@
-My Octopress Page is coming soon &hellip;
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ecommerce and Marketing from Bleep Systems</title>
+  <meta name="author" content="Bleep Systems">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="lxeOOZEyAwigolpastBPrzOzB3NthftNx37WOwR0RIk" />
+  
+  
+
+  <link rel="canonical" href="http://blog.bleepsystems.com/index.html"/>
+  <link href="/favicon.png" rel="shortcut icon" />
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/bleepsystems" rel="alternate" title="Ecommerce and Marketing from Bleep Systems" type="application/atom+xml"/>
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+</head>
+
+<body  >
+  <header><hgroup>
+  <h2 class="intro">We make software for the internet.<br />Software that sells.</h2>
+  <h2><a href="/"><img src="/images/bleepsystems.gif" ></a></h2>
+</hgroup>
+
+</header>
+  <nav role=navigation><ul role=subscription data-subscription="rss email">
+  <li><a href="http://feeds.feedburner.com/bleepsystems" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="site-search">
+    <input type="hidden" name="q" value="site:blog.bleepsystems.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul role=main-navigation>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+
+
+
+  <article>
+    
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/how-we-optimise-images-for-seo-and-fast-page-loading-times/">How We Optimise Images for SEO and Fast Page Loading Times</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+
+  
+
+
+
+<time datetime="2012-01-29T19:15:00+08:00" pubdate  data-updated="true" >Jan 29<span>th</span>, 2012</time></p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here are bleep systems we have a number of simple core values that run through all our product design decisions when adding features and functionality to our products. Two of those values are speed and search engine optimisation (SEO).</p>
+
+<p><a href="http://blog.bleepsystems.com/2011/simple-guide-to-product-photography/" title="Simple guide to product photography">Product photography and images</a> are an important part of any ecommerce system. Images can be tricky to handle especially when you are dealing with tens of thousands of them at many different sizes. Any small nudge that you can give to your site to help search engines find and index more effectively the better.</p>
+
+<p>We&#8217;re not saying that you won&#8217;t sell anything if you don&#8217;t follow these steps but you must be doing at least the same if not more than your competitors. We love the
+<a href="http://www.seomoz.org/ugc/strategic-link-building-why-you-dont-need-to-outrun-lions">the lion anecdote in this article</a> that describes perfectly the situation all ecommerce sites are in.</p>
+
+<p>Like many whitehat techniques there is nothing groundbreaking about what we describe here  but it is important to get the right foundations before you can build any higher. Its amazing how many people don&#8217;t get these right.</p>
+
+<blockquote><p>Our commerce platform automagically takes care of all of these jobs
+freeing you up to concentrate on other things.</p></blockquote>
+
+<h3>1. Resize for all image sizes and optimise</h3>
+
+<p>We use the <a href="http://php.net/manual/en/book.image.php">GD Image library</a> to resize all of the product images uploaded to our system. Storage is relatively cheap these days so its easy to make 6 sizes of images and store them without breaking the bank. While resizing them its important to save them as small as possible (file size) without compromising quality. We set up our scripts to learn what works best.</p>
+
+<p>Another alernative option which we see done a lot is to dynamically generate all the images as and when you need them. This saves on inital processing but we find this slows down the site when its busy. Also see task 2.</p>
+
+<h3>2. Serve the static images from a subdomain</h3>
+
+<p>The web browser has a concurrent connection limit which it uses when downloading any webpage. As any webpage is made up of multiple requests (css, javascript, images,  html etc) this factor can limit the speed to which any page can be downloaded as the browser gets &#8216;blocked&#8217; while waiting for connections to download.</p>
+
+<p>By using alternate domain names the browser you create more queues that can be downloaded at the same time. An example for images would be this.</p>
+
+<pre><code>http://images.bleepsystems.com
+</code></pre>
+
+<h3>3. Name the image files correctly</h3>
+
+<p>There are different techniques to naming images and the method we use reinforces other parts of our on page SEO efforts. We use the department and product name in both the page title, the meta tags, the URL and the H1 - so having them in the images also helps a lot.</p>
+
+<p>The format we use (for each type of image) is</p>
+
+<pre><code>department-product_name-product_code.jpg
+</code></pre>
+
+<p>Do a quick search on google and you will see lots of opinion the best way to do this and you will get different results depending on how good the rest of your page is, but if the department (or section) and product name is elsewhere on the page this method will work for you.</p>
+
+<h3>4. Use Amazon CloudFront (or another cdn)</h3>
+
+<p>Content delivery networks do a few cool things. The main one I want to talk about here is serving our images from a geographical location close to the user. If you are just selling locally this might not be the right thing to do, but for those of you selling globally this is a no brainer. Users hate slow sites and this will help yours to fly.</p>
+
+<h3>5. Leverage browser caching for images</h3>
+
+<p>Product images change infrequently and they take time to download each time you visit the product page. Setting an expiry date or a maximum age in the HTTP headers for static resources instructs the browser to load previously downloaded resources from local disk rather than over the network. Exactly how to do this is out of scope but you can <a href="http://code.google.com/speed/page-speed/docs/caching.html">read about how to leverage image caching at Google</a>.</p>
+
+<p>If you are looking for a new ecommerce platform or have any requests for blog articles, <a href="mailto:info@bleepsystems.com">please get in touch</a>.</p>
+
+<p><strong>Tools</strong></p>
+
+<p>Two tools for testing your page speed</p>
+
+<ol>
+<li><a href="https://developers.google.com/pagespeed/">Google Page Speed</a></li>
+<li><a href="http://developer.yahoo.com/yslow/">Y Slow from Yahoo</a></li>
+</ol>
+
+</div>
+  
+  
+
+
+  </article>
+
+
+  <article>
+    
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/simple-guide-to-product-photography/">Simple Guide to Product Photography</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-11-04T11:55:00+08:00" pubdate  data-updated="true" >Nov 4<span>th</span>, 2011</time></p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Making your product photography POP</h2>
+
+<p>As with most things, the more you can prepare before you start taking your product photographs, the better. Preparing means first of all, looking at your equipment and your set up, then your products, then the photographs themselves.</p>
+
+<h2>Your equipment and set up</h2>
+
+<p>A few things here, and I will warn you: you&#8217;ll need something a bit better than a point-and-shoot camera. It doesn&#8217;t have to be a fancy DSLR but you will need to be able to adjust the shutter speed, the light sensitivity (known in camera world as ISO settings) and the exposure of your camera. Anything beyond that is an extra bonus.</p>
+
+<p>You will also need some lights – but you can use a couple of lamps from home as long as you are able to swivel the light around. If you do use lamps from home, make sure you don&#8217;t use those new energy saving globes as the light they emit is too blue/green and will make your products look positively stern and stark.</p>
+
+<p>A studio: you can create a makeshift one of these at home in your bathroom, as long as it&#8217;s white and features some natural light and a couple of power points. You will also need a very new white sheet or two, and some masking tape. Surrounding your product with white space is standard practice and will make things much easier for you when it comes to editing your photos later on.</p>
+
+<p>Reflector sheets are more useful than they sound because they eliminate the pesky shadows that will lend darkness to your photos. They come in various diameters and usually are gold on one side and silver on the other.</p>
+
+<h2>Your products</h2>
+
+<p>Before you begin taking your photos, carefully consider your audience and what you are trying to convey in your product photos. Whatever you do, let your product sell itself and give your customers a reason to stay on your site.</p>
+
+<p>Photos carry a lot of meaning, much of it subtle, so before you start snapping away, ask yourself, is it a photo to show how to use a product? Is it situational and will I need a model? If you are unable to explain to someone in a few words what your product actually does, a simple photo won&#8217;t cut it. Take a sequence of photos with a model demonstrating how to use the product or showing what it does. Put the best part of your product at the front and in your customers&#8217; faces: it will be what they remember.</p>
+
+<p>Whatever you are trying to photograph, make sure before you start that it is free of stains, dust, rips, cracks or any other the product, inspect it carefully for tears, stains, cracks, chips or other imperfections before you start snapping away. Try coating sealed products such as hard plastics with a thin coat of hairspray to increase its sparkle and shine. Remember, though, if it is shiny there will be a reflection, so make sure that you can&#8217;t see yourself in it!</p>
+
+<p>Next, take some test shots to see how your camera, lighting and studio settings are working. Especially check your exposure so that your photos are not too shadowy or blown out with too much light. Adjust as necessary: reduce exposure if your shots are too bright; increase it for the reverse.</p>
+
+<p>Think about the angle of your shot. It&#8217;s true that some folks like to have a photo taken from a certain angle rather than others: this is also true of products. Play around and see which angle works best for your products.</p>
+
+<p>Take a note of the settings that work for your products: this will save you having to try and replicate from the beginning every time you start a photography session. This is especially relevant for your colour control settings, which most DSLR cameras feature. You can usually pick and choose how saturated with colour you want your shots, but if your product is already really colourful, you could try adjusting your setting to a more muted one.</p>
+
+<p>Also make sure that you are shooting pictures in the right image format. If you are only going to be using your pictures online, you can get away with using jpeg format. You can use a RAW format, which is like a digital negative file, but because it contains a truckload more data than jpeg format, it takes up a lot of space and you will need special converters when you touch up your images on the computer.</p>
+
+<p>The next step is to edit your photos. To do this most geeks will have and use Adobe Photoshop or Elements. Elements is easier to use if you are new or starting to learn about digitally enhancing your photography. But there are several photo editing programmes around, some free and some very expensive. By using a photo editing programme you have the ideal opportunity to really make your photography stand out and catch your customers&#8217; eye.</p>
+
+<p>When you edit you can remove shadow, lighten an under-exposed shot, amp up your colour saturation or your contrast; and you can crop or reduce in size the shot itself. This will also be where you can save your photo to the right file format, dimensions and size for your website. It&#8217;s a good idea to play around with your test shots in your editing programme for a while first, so you can get a good idea of which editing tools do which jobs.</p>
+
+<p>Once you have uploaded your imagery to your website, make sure that you have also included captions and alt tags. Check, double check and triple check that you have spelled the name of the product correctly in each instance. Poor spelling makes your website seem unprofessional and amateur.</p>
+
+<p>And on that note: one of the basic rules of photography is that the less busy the background, the more focus on the subject of the photo. This is especially true for product images, which should really be cut out, properly masked and presented against a white background so your customers can see the product (most) clearly. Apply this rule consistently to maintain a professional feel to your imagery.</p>
+
+<p>Here is an example of the above techniques produced by Gavin Crossley at The Craft Emporium (site coming soon).</p>
+
+<p><img class='[blank] ' src='/images/posts/058008.jpg' width='' height='' alt='[Great Work Gavin!]' title='[Great Work Gavin!]'></p>
+</div>
+  
+  
+
+
+  </article>
+
+
+  <article>
+    
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/order-confirmation-email-basics-how-to-get-it-right/">Order Confirmation Email Basics: How to Get It Right</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-10-03T15:07:00+08:00" pubdate  data-updated="true" >Oct 3<span>rd</span>, 2011</time></p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This weeks topic will look at the order confirmation email. More often than not this part of the shopping process gets too little attention compared to the effort that has been put into getting a customer in the first place. Sometimes we find it can even seem like the store has rushed this part and this doesnt help at all with reducing post purchase anxiety. For new customers this is the first time you have communicated with them after taking their money. The more professional this email is the more the customer will know they made the right decision in buying from you. Get it wrong and you&#8217;ll end up looking bad. New web stores can be especially vulnerable to this.</p>
+
+<h3>First things first</h3>
+
+<p>Before we even consider what is in the email - make sure your system is sending emails correctly. By this we mean make sure your server is setup right. This might seem obvious but email can go wrong with very little warning leaving you with a debugging nightmare. The first you will know about this part not working is when a customer calls you up complaining. For new customers this will be the first contact via email so you can not rely on being on any safe senders list.</p>
+
+<p>To make sure your email gets delivered at a very minimum you should ensure:</p>
+
+<ol>
+<li>Correct DNS setup. Make sure you are allowed to send email from your chosen domain at the server IP address.</li>
+<li>Make sure the email headers are correct.</li>
+<li>Make sure the content is not spammy which may lead to the email being marked as spam by over sensitive spam filters. Have a look in your SPAM box in your email client to see what type of words and phrases to avoid.</li>
+<li>Make sure you are not sending from a blacklisted IP. <a href="http://en.wikipedia.org/wiki/DNSBL" title="DNSBL on Wikipedia">DNSBL</a></li>
+</ol>
+
+
+<p>If you want to be sure your email meets all these requirements why not outsource this part of your business. There are some good 3rd party companies who do the email for you. We’ve used both <a href="http://postmarkapp.com/">Postmark</a> and <a href="http://sendgrid.com/">Sendgrid</a> and have been more than happy with both. Prices for peace of mind are extremely reasonable.</p>
+
+<p>If we have not managed to persuade you yet and you are really determined to do it yourself read this piece on <a href="http://www.diaryofaninja.com/blog/2011/09/27/what-all-good-web-developers-should-know-about-sending-email">what good web developers should know about sending email</a> and weep.</p>
+
+<h3>Excellent - now the interesting bit about content</h3>
+
+<p><img class='[blank] ' src='/images/posts/email_nobody.jpg' width='' height='' alt='[100% 100%] [The Rise of Subscription Commerce]' title='[100% 100%] [The Rise of Subscription Commerce]'></p>
+
+<p>Email meta information such as</p>
+
+<p><strong>From Name</strong>.
+This might seem like common sense but make this clear. Normally the best option is to put your domain name or the name of your store. It need to be something the customer will instantly recognise. Don&#8217;t leave it as the group that apache is running as on your web server like in the above example.</p>
+
+<p><strong>Reply To</strong>.
+Always, always, always make this a real address. There are too many companies using &#8216;do not reply to this email address&#8217; and we think this is bad. Why would you think it was a good idea to frustrate paying customers and make it hard for them to get in touch? This is an easy win and puts you ahead of competitors with very little effort. Just setup a new email address like support@yourcompany.com and let people use it.</p>
+
+<p><strong>Subject lines</strong>
+Try to summarise what is in the email. If this person also subscribes to other email from your company they need to be able to easily differentiate between the two. This will obviously differ depending on company but we think these are good email subject lines.</p>
+
+<ul>
+<li>Your Order Confirmation</li>
+<li>Your Monthly Invoice</li>
+<li>Thank you. Your Order Summary is Here.</li>
+<li>Your Order Summary. This is What Happens Now.</li>
+</ul>
+
+
+<h3>Inside the email</h3>
+
+<p>Ask yourself what you like to see when you have just purchased online. You normally need the answers to a few simple questions and to be reassured of a few things. These are nearly always the same for all customers.</p>
+
+<h5>1. Summarise what has just happened</h5>
+
+<p>Reinforce the purchase with the customer. They may not be looking at this email for a few days after the purchase and it is always good to summarise the purchase.</p>
+
+<h5>2. Show the order</h5>
+
+<p>This is now the only reference the customer has of buying from you. You must provide them with a list of what they purchased and how much they spend on each item. Amongst other things this helps you if you decide to change your pricing and the customer queries the amount.</p>
+
+<h5>3. Describe what to do in case of an error</h5>
+
+<p>Mistakes happen and people change their minds. This can even happen 2 minutes after buying something. You should provide easy instructions or a link to page that describes how to change the order. This section might also describe your refunds and returns policy.</p>
+
+<h5>4. Describe what will happen next</h5>
+
+<p>Tell the customer when they might expect the product based on the shipping they have purchased. If you are selling digital goods, explain where to go to download the product.</p>
+
+<h5>5. Sign the email from a real person or team.</h5>
+
+<p>We love this one and whenever this happens to us we get a warm and fuzzy feeling! Provide a name and phone number of someone you can speak to if you need. It is as simple as that. Reassuring your customer that there is someone there to talk to will give them massive confidence in your business. If the customer is a regular shopper why not go one step further and attach a support Vcard. I know we love it when this happens.</p>
+
+<h5>6. Give your customer an incentive to buy again straight away</h5>
+
+<p>We are all in business to sell. Why not include a coupon code with a discount if this customer buys again within a week. If its a big enough discount people will jump at the chance.</p>
+
+<p>If you have anything to say or have any improvements for this article please leave a comment below.</p>
+
+<p>Thanks for reading.</p>
+</div>
+  
+  
+
+
+  </article>
+
+
+  <article>
+    
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/what-is-the-best-way-to-structure-the-checkout-process/">What Is the Best Way to Structure the Checkout Process?</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-09-25T14:00:00+08:00" pubdate  data-updated="true" >Sep 25<span>th</span>, 2011</time></p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A question that keeps cropping up recently is from customers who want to know the best way to structure the checkout process. Firstly you should never stray from the globally accepted online shopping metaphor which is how all good web stores operate and how most people would expect to buy a product. Some stores insist on putting obstacles in the way like signing in, but all this will do is, well, get in peoples way. Stick with this method and you will be fine.</p>
+
+<p>The normal process to buy something is this</p>
+
+<ol>
+<li>Discover products</li>
+<li>Add products to cart</li>
+<li>Checkout</li>
+<li>Review cart and change totals</li>
+<li>Enter details and payment information</li>
+<li>Receive confirmation</li>
+</ol>
+
+
+<p>This article is talking about step 5 or more specifically the journey from 4 to 5 then 6. The customer has a full cart and now they want to pay.</p>
+
+<p>There are two ways of structuring this part of the process.</p>
+
+<h3>Bank Hosted</h3>
+
+<p>This is where the customer leaves your site and is taken to a 3rd party (normally the bank, but perhaps Paypal) site where they pay and then are taken back to your website for confirmation.</p>
+
+<p>Here at <a href="http://bleepsystems.com">Bleep</a> we find that there is a common misconception that this is less desirable from a user experience perspective. We think it depends. Many people are much more comfortable putting their credit card details into the website of a bank rather than that of a site which perhaps they have never seen before. This might be especially true if your site does not have a physical address and phone number on it.</p>
+
+<p>Another advantage of this method is that the bank deals with all the security requirements regarding credit card numbers and data privacy laws. The merchant never has to deal with any of this.</p>
+
+<p>This route often allows for the hosted bank to implement any additional security checks such as the ‘Verified by Visa’ check. Sometimes implementing the hosted solution is the only way to get such checks as is the case with <a href="http://www.anz.com/small-business/products-services/merchant-services/internet-payment-solutions/egate/" title="eGate">eGate</a> from ANZ in Australia.</p>
+
+<p>This method although a little more disjointed is perfectly valid and is used successfully in thousands of places on the web.</p>
+
+<h3>Merchant Hosted</h3>
+
+<p>Most new customers we get often think this is the way to go and the reasons why are obvious. The main one being that all the <a href="http://www.amazon.co.uk">big</a> <a href="http://play.com">etailers</a> structure the checkout process this way. In the eyes of new etailers - if you do it this way you must be a large, successful and powerful. To a certain degree this is true and it is because of this fact that people are willing to give you there credit card details.</p>
+
+<p>With this structure the customer never leaves your site. All the payment forms including billing, shipping and card details done within the brand of the main site. The payment details are submitted securely to the bank and a message sent back.</p>
+
+<p>This structure takes the longest to implement and test from a development point of view. It has the major disadvantage that each time the bank changes their system, or adds additional security it is necessary to spend money implementing the changes. Someone else&#8217;s decision to change something can end up costing you money.</p>
+
+<p>If you have any experience with any of the above or you think we could improve the answer to this question then please leave a comment below.</p>
+</div>
+  
+  
+
+
+  </article>
+
+
+  <article>
+    
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/site-search-analytics-ssa/">Site Search Analytics in E-commerce (SSA)</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-09-20T20:27:00+08:00" pubdate  data-updated="true" >Sep 20<span>th</span>, 2011</time></p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Site search analytics (SSA) is an emerging form of site analytics that studies search query data to discover patterns in site use. Here at Bleep we’ve been working hard to understand how to benefit from the information this type of analysis provides which drive users to buying products.</p>
+
+<p>Any searchable ecommerce site is sitting on top of hugely valuable and usually under-exploited data: logs that capture what users are searching for, how often each query was searched, and how many results each query retrieved. Search queries are gold: they are real data that show us exactly what users are searching for in their own words.</p>
+
+<p>The data you obtain from internal search analytics is essentially a resource that tells you what your visitors cannot find on your site. For example, if you sell clothing and you have hundreds of searches for &#8220;white t-shirts&#8221; but you don’t sell them, it might just be worth looking into selling white t-shirts. If you receive a lot of searches for white t-shirts, but you have a link to your white t-shirts category right on your navigation bar, then there’s a possibility that there is something wrong with your site navigation’s design and effectiveness.</p>
+
+<p>If your top search term is ‘opening hours’ you need to make sure that the right page is at the top of your search results. Studying what users put in and analysing what these search terms bring back will help you a lot. If you can improve the UX and sales by even a small percentage then it has been worth it.</p>
+
+<p><strong>Concrete Ways to use SSA in Ecommerce</strong></p>
+
+<ol>
+<li><p>To develop useful search system. To do this you need get close up to your search system. SSA will help you understand how people entered searches, where they were when they entered them, and how they interpreted the search results.</p></li>
+<li><p>Navigation. If certain pages generate more activity than others you need to find out why. Perhaps certain navigational options are missing or are just confusing. SSA asks questions in these areas (which you often may take for granted). What works navigationally for you might not be obvious for others.</p></li>
+<li><p>To improve your content. Are there any queries that bring back no results? Is this because you lack the content or that the search is in effective in bringing back the accurate results. is the relevant content mistitled? Or poorly written? SSA will help you determine what content is missing and what to do to existing content to make sure it gets found.</p></li>
+<li><p>To discover patterns. Can you structure the search data in different ways and examine it? Are there any patterns? Can you use those patterns to determine what types of metadata and content are the most important to your searchers? Can you detect changes in seachers’ behavior and needs that are seasonal? Patterns describe behavior.</p></li>
+<li><p>To highlight failure. When searches return no results or poor results - ask why? And what can we do to fix those problems and improve performance?</p></li>
+<li><p>To examine user behavior. What happens during a specific search session? How do searchers’ needs and understanding of the content change as they search?</p></li>
+<li><p>To analyse the audience. How might we uncover the differences between audience segments and their information needs? And how might we better address those differing needs?</p></li>
+</ol>
+
+
+<p><strong>Using Google Analytics</strong></p>
+
+<p>With Google Analytics V5 it is easy to get started with SSA. If your website has a search box, go ahead and perform a search to see the URL of the search results. For example your search results might be http://yoursite.com/?s=searchtermhere. Once you have this for your site, click on the settings wheel icon in the top right corner of your Analytics menu bar and find your Profile Settings. Under Site Search Settings, select the option to ‘Do track Site Search’ and enter s as the query parameter (or the one that fits your site’s URL structure).</p>
+</div>
+  
+  
+
+
+  </article>
+
+
+  <article>
+    
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/the-rise-of-subscription-commerce/">The Rise of Subscription Commerce</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-09-15T05:56:00+08:00" pubdate  data-updated="true" >Sep 15<span>th</span>, 2011</time></p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Subscription based ecommerce businesses (“subcom” for short) are on the rise. In a typical situation, a subcom business will send their customers (“the subscribers”) a box full of products on a regular basis. Very often these businesses try to attract customers with specific needs. For example, a subcom appealing to new mothers may send their subscribers a box of baby care items each month.</p>
+
+<p><a href="http://blog.kissmetrics.com/subcom/"><img class='[blank] ' src='http://blog.kissmetrics.com/wp-content/uploads/2011/09/subcom-sm.jpg' width='' height='' alt='[100% 100%] [The Rise of Subscription Commerce]' title='[100% 100%] [The Rise of Subscription Commerce]'></a>.</p>
+</div>
+  
+  
+
+
+  </article>
+
+<nav role="pagination">
+  <div>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+  </div>
+</nav>
+
+<script type="text/javascript">
+    var disqus_shortname = 'bleepsystemsblog';
+    (function () {
+      var s = document.createElement('script'); s.async = true;
+      s.type = 'text/javascript';
+      s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+</div>
+<aside role=sidebar>
+  
+    <!-- Begin MailChimp Signup Form -->
+<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; margin: 10px 0; }
+	#mc_embed_signup input.email{ width: 90%; }
+	#mc_embed_signup input.button { background: #f00; }
+	small{ display: block; font-size: 0.8em; color: #999; }
+</style>
+<div id="mc_embed_signup">
+<form action="http://bleepsystems.us2.list-manage.com/subscribe/post?u=379e7cc5eff4db347d207c9f9&amp;id=7d6cb3a880" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+	<label class="np" for="mce-EMAIL">Receive new posts via email<small>100% opt out</small></label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+	<div class="clear"><input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+
+<!--End mc_embed_signup--><section>
+  <h1>Bleep Systems Blog</h1>
+  <p>Our blog features regular posts on ecommerce and marketing with tips and techniques to optimise your online store. We&#8217;ve learned all this from our <a href="#">custom ecommerce system</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/how-we-optimise-images-for-seo-and-fast-page-loading-times/">How We Optimise Images for SEO and Fast Page Loading Times</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/simple-guide-to-product-photography/">Simple Guide to Product Photography</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/order-confirmation-email-basics-how-to-get-it-right/">Order Confirmation Email Basics: How to Get It Right</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/what-is-the-best-way-to-structure-the-checkout-process/">What is the Best Way to Structure the Checkout Process?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/site-search-analytics-ssa/">Site Search Analytics in E-commerce (SSA)</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("bleepsystems", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/bleepsystems" class="twitter-follow-button" data-width="208px" data-show-count="true">Follow @bleepsystems</a>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/js/chunkyslink?title=&count=3&sort=date&extended"></script>
+  <p><a href="http://delicious.com/chunkyslink">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer><p>
+  Copyright &copy; 2012 - Bleep Systems -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25723880-1']);
+  _gaq.push(['_setDomainName', '.bleepsystems.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>
