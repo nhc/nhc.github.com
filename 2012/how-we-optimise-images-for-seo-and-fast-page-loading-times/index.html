@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How We Optimise Images for SEO and Fast Page Loading Times - Ecommerce and Marketing from Bleep Systems</title>
+  <meta name="author" content="Bleep Systems">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="lxeOOZEyAwigolpastBPrzOzB3NthftNx37WOwR0RIk" />
+  
+  
+
+  <link rel="canonical" href="http://blog.bleepsystems.com/2012/how-we-optimise-images-for-seo-and-fast-page-loading-times/"/>
+  <link href="/favicon.png" rel="shortcut icon" />
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/bleepsystems" rel="alternate" title="Ecommerce and Marketing from Bleep Systems" type="application/atom+xml"/>
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+</head>
+
+<body  >
+  <header><hgroup>
+  <h2 class="intro">We make software for the internet.<br />Software that sells.</h2>
+  <h2><a href="/"><img src="/images/bleepsystems.gif" ></a></h2>
+</hgroup>
+
+</header>
+  <nav role=navigation><ul role=subscription data-subscription="rss email">
+  <li><a href="http://feeds.feedburner.com/bleepsystems" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="site-search">
+    <input type="hidden" name="q" value="site:blog.bleepsystems.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul role=main-navigation>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" id="single-entry">
+  
+  <header>
+    
+      <h1 class="entry-title">How We Optimise Images for SEO and Fast Page Loading Times</h1>
+    
+    
+      <p class="meta">
+
+
+
+
+
+  
+
+
+
+<time datetime="2012-01-29T19:15:00+08:00" pubdate  data-updated="true" >Jan 29<span>th</span>, 2012</time></p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Here are bleep systems we have a number of simple core values that run through all our product design decisions when adding features and functionality to our products. Two of those values are speed and search engine optimisation (SEO).</p>
+
+<p><a href="http://blog.bleepsystems.com/2011/simple-guide-to-product-photography/" title="Simple guide to product photography">Product photography and images</a> are an important part of any ecommerce system. Images can be tricky to handle especially when you are dealing with tens of thousands of them at many different sizes. Any small nudge that you can give to your site to help search engines find and index more effectively the better.</p>
+
+<p>We&#8217;re not saying that you won&#8217;t sell anything if you don&#8217;t follow these steps but you must be doing at least the same if not more than your competitors. We love the
+<a href="http://www.seomoz.org/ugc/strategic-link-building-why-you-dont-need-to-outrun-lions">the lion anecdote in this article</a> that describes perfectly the situation all ecommerce sites are in.</p>
+
+<p>Like many whitehat techniques there is nothing groundbreaking about what we describe here  but it is important to get the right foundations before you can build any higher. Its amazing how many people don&#8217;t get these right.</p>
+
+<blockquote><p>Our commerce platform automagically takes care of all of these jobs
+freeing you up to concentrate on other things.</p></blockquote>
+
+<h3>1. Resize for all image sizes and optimise</h3>
+
+<p>We use the <a href="http://php.net/manual/en/book.image.php">GD Image library</a> to resize all of the product images uploaded to our system. Storage is relatively cheap these days so its easy to make 6 sizes of images and store them without breaking the bank. While resizing them its important to save them as small as possible (file size) without compromising quality. We set up our scripts to learn what works best.</p>
+
+<p>Another alernative option which we see done a lot is to dynamically generate all the images as and when you need them. This saves on inital processing but we find this slows down the site when its busy. Also see task 2.</p>
+
+<h3>2. Serve the static images from a subdomain</h3>
+
+<p>The web browser has a concurrent connection limit which it uses when downloading any webpage. As any webpage is made up of multiple requests (css, javascript, images,  html etc) this factor can limit the speed to which any page can be downloaded as the browser gets &#8216;blocked&#8217; while waiting for connections to download.</p>
+
+<p>By using alternate domain names the browser you create more queues that can be downloaded at the same time. An example for images would be this.</p>
+
+<pre><code>http://images.bleepsystems.com
+</code></pre>
+
+<h3>3. Name the image files correctly</h3>
+
+<p>There are different techniques to naming images and the method we use reinforces other parts of our on page SEO efforts. We use the department and product name in both the page title, the meta tags, the URL and the H1 - so having them in the images also helps a lot.</p>
+
+<p>The format we use (for each type of image) is</p>
+
+<pre><code>department-product_name-product_code.jpg
+</code></pre>
+
+<p>Do a quick search on google and you will see lots of opinion the best way to do this and you will get different results depending on how good the rest of your page is, but if the department (or section) and product name is elsewhere on the page this method will work for you.</p>
+
+<h3>4. Use Amazon CloudFront (or another cdn)</h3>
+
+<p>Content delivery networks do a few cool things. The main one I want to talk about here is serving our images from a geographical location close to the user. If you are just selling locally this might not be the right thing to do, but for those of you selling globally this is a no brainer. Users hate slow sites and this will help yours to fly.</p>
+
+<h3>5. Leverage browser caching for images</h3>
+
+<p>Product images change infrequently and they take time to download each time you visit the product page. Setting an expiry date or a maximum age in the HTTP headers for static resources instructs the browser to load previously downloaded resources from local disk rather than over the network. Exactly how to do this is out of scope but you can <a href="http://code.google.com/speed/page-speed/docs/caching.html">read about how to leverage image caching at Google</a>.</p>
+
+<p>If you are looking for a new ecommerce platform or have any requests for blog articles, <a href="mailto:info@bleepsystems.com">please get in touch</a>.</p>
+
+<p><strong>Tools</strong></p>
+
+<p>Two tools for testing your page speed</p>
+
+<ol>
+<li><a href="https://developers.google.com/pagespeed/">Google Page Speed</a></li>
+<li><a href="http://developer.yahoo.com/yslow/">Y Slow from Yahoo</a></li>
+</ol>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Bleep Systems</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2012-01-29T19:15:00+08:00" pubdate  data-updated="true" >Jan 29<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/seo/'>SEO</a>, <a class='category' href='/blog/categories/ecommerce/'>ecommerce</a>, <a class='category' href='/blog/categories/features/'>features</a>, <a class='category' href='/blog/categories/images/'>images</a>
+  
+</span>
+
+
+
+    </p>
+    
+      <!-- Begin MailChimp Signup Form -->
+<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; border: 1px solid #ccc; }
+	#mc_embed_signup input.email{ width: 90%; }
+	#mc_embed_signup input.button { background: #f00; }
+</style>
+<div id="mc_embed_signup">
+<form action="http://bleepsystems.us2.list-manage.com/subscribe/post?u=379e7cc5eff4db347d207c9f9&amp;id=7d6cb3a880" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+	<label for="mce-EMAIL">If you liked this post leave your email for new posts to your inbox</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+	<div class="clear"><input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+<div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.bleepsystems.com/2012/how-we-optimise-images-for-seo-and-fast-page-loading-times/" data-via="bleepsystems" data-counturl="http://blog.bleepsystems.com/2012/how-we-optimise-images-for-seo-and-fast-page-loading-times/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+
+	<script type="text/javascript" src="http://static.evernote.com/noteit.js"></script>
+<a href="#" onclick="Evernote.doClip({contentId:'single-entry',providerName:'Bleep Systems Blog'}); return false;"><img src="http://static.evernote.com/article-clipper.png" alt="Clip to Evernote" /></a>
+</div>
+
+
+
+    
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread"><div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'bleepsystemsblog';
+  var disqus_identifier = 'http://blog.bleepsystems.com/2012/how-we-optimise-images-for-seo-and-fast-page-loading-times/';
+  var disqus_url = 'http://blog.bleepsystems.com/2012/how-we-optimise-images-for-seo-and-fast-page-loading-times/';
+  //var disqus_developer = 1;
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside role=sidebar>
+  
+    <!-- Begin MailChimp Signup Form -->
+<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; margin: 10px 0; }
+	#mc_embed_signup input.email{ width: 90%; }
+	#mc_embed_signup input.button { background: #f00; }
+	small{ display: block; font-size: 0.8em; color: #999; }
+</style>
+<div id="mc_embed_signup">
+<form action="http://bleepsystems.us2.list-manage.com/subscribe/post?u=379e7cc5eff4db347d207c9f9&amp;id=7d6cb3a880" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+	<label class="np" for="mce-EMAIL">Receive new posts via email<small>100% opt out</small></label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+	<div class="clear"><input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+
+<!--End mc_embed_signup--><section>
+  <h1>Bleep Systems Blog</h1>
+  <p>Our blog features regular posts on ecommerce and marketing with tips and techniques to optimise your online store. <!-- We've learned all this from our <a href="#">custom ecommerce system</a>--></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/solving-a-responsive-design-navigation-problem/">Solving a Responsive Design Navigation Problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/how-we-optimise-images-for-seo-and-fast-page-loading-times/">How We Optimise Images for SEO and Fast Page Loading Times</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/simple-guide-to-product-photography/">Simple Guide to Product Photography</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/order-confirmation-email-basics-how-to-get-it-right/">Order Confirmation Email Basics: How to Get It Right</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/what-is-the-best-way-to-structure-the-checkout-process/">What is the Best Way to Structure the Checkout Process?</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("bleepsystems", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/bleepsystems" class="twitter-follow-button" data-width="208px" data-show-count="true">Follow @bleepsystems</a>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/js/chunkyslink?title=&count=3&sort=date&extended"></script>
+  <p><a href="http://delicious.com/chunkyslink">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer><p>
+  Copyright &copy; 2012 - Bleep Systems -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25723880-1']);
+  _gaq.push(['_setDomainName', '.bleepsystems.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>
